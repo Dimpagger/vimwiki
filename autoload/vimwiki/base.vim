@@ -826,7 +826,7 @@ function! vimwiki#base#edit_file(command, filename, anchor, ...)
 
   " determine if file is being created for the first time
   " also check that it isn't in an open buffer that hasn't been saved
-  if !filereadable(fname) && bufnr(fname) == -1
+  if !filereadable(a:filename) && bufnr(a:filename) == -1
     let newfile = 1
   else
     let newfile = 0
